@@ -1,0 +1,344 @@
+2025-06-29 19:01:44,784 - __main__ - INFO - Application starting.
+2025-06-29 19:01:44,894 - __main__ - INFO - Loading Cora content from cora/cora.content
+2025-06-29 19:01:45,297 - __main__ - INFO - Loading Cora citations from cora/cora.cites
+2025-06-29 19:01:45,322 - __main__ - INFO - Building Cora graph and calculating metrics...
+2025-06-29 19:01:45,678 - __main__ - INFO - Cora network analysis complete.
+2025-06-29 19:01:45,807 - __main__ - INFO - Starting Cora model training...
+2025-06-29 19:01:45,912 - __main__ - INFO - Training Logistic Regression for Cora...
+2025-06-29 19:01:46,003 - __main__ - INFO - Training SGD Classifier for Cora...
+2025-06-29 19:01:46,027 - __main__ - INFO - Cora model training finished.
+2025-06-29 19:01:46,123 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:01:46,123 - __main__ - INFO - Application finished running.
+2025-06-29 19:01:46,124 - __main__ - INFO - Starting Streamlit app...
+2025-06-29 19:02:37,169 - __main__ - INFO - Application starting.
+2025-06-29 19:02:37,300 - __main__ - INFO - Loading Cora content from cora/cora.content
+2025-06-29 19:02:37,650 - __main__ - INFO - Loading Cora citations from cora/cora.cites
+2025-06-29 19:02:37,668 - __main__ - INFO - Building Cora graph and calculating metrics...
+2025-06-29 19:02:38,017 - __main__ - INFO - Cora network analysis complete.
+2025-06-29 19:02:38,122 - __main__ - INFO - Starting Cora model training...
+2025-06-29 19:02:38,234 - __main__ - INFO - Training Logistic Regression for Cora...
+2025-06-29 19:02:38,338 - __main__ - INFO - Training SGD Classifier for Cora...
+2025-06-29 19:02:38,365 - __main__ - INFO - Cora model training finished.
+2025-06-29 19:02:38,495 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:02:38,495 - __main__ - INFO - Application finished running.
+2025-06-29 19:04:51,926 - __main__ - INFO - Application starting.
+2025-06-29 19:04:52,806 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:04:52,808 - __main__ - INFO - Application finished running.
+2025-06-29 19:05:02,750 - __main__ - INFO - Application starting.
+2025-06-29 19:05:03,318 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:05:03,318 - __main__ - INFO - Application finished running.
+2025-06-29 19:05:05,359 - __main__ - INFO - Application starting.
+2025-06-29 19:05:05,470 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:05:05,470 - __main__ - INFO - Application finished running.
+2025-06-29 19:05:16,552 - __main__ - INFO - Application starting.
+2025-06-29 19:05:16,744 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:05:16,744 - __main__ - INFO - Application finished running.
+2025-06-29 19:05:17,529 - __main__ - INFO - Application starting.
+2025-06-29 19:05:17,671 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:05:17,671 - __main__ - INFO - Application finished running.
+2025-06-29 19:05:21,709 - __main__ - INFO - Application starting.
+2025-06-29 19:05:21,962 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:05:21,963 - __main__ - INFO - Application finished running.
+2025-06-29 19:05:25,115 - __main__ - INFO - Application starting.
+2025-06-29 19:05:25,457 - __main__ - WARNING - Missing GitHub data files.
+2025-06-29 19:05:25,457 - __main__ - INFO - Application finished running.
+2025-06-29 19:06:19,778 - __main__ - INFO - Application starting.
+2025-06-29 19:06:19,885 - __main__ - INFO - Loading Cora content from cora/cora.content
+2025-06-29 19:06:20,212 - __main__ - INFO - Loading Cora citations from cora/cora.cites
+2025-06-29 19:06:20,228 - __main__ - INFO - Building Cora graph and calculating metrics...
+2025-06-29 19:06:20,531 - __main__ - INFO - Cora network analysis complete.
+2025-06-29 19:06:20,624 - __main__ - INFO - Starting Cora model training...
+2025-06-29 19:06:20,721 - __main__ - INFO - Training Logistic Regression for Cora...
+2025-06-29 19:06:20,804 - __main__ - INFO - Training SGD Classifier for Cora...
+2025-06-29 19:06:20,830 - __main__ - INFO - Cora model training finished.
+2025-06-29 19:06:20,905 - __main__ - INFO - Loading GitHub edges from git_web_ml/musae_git_edges.csv
+2025-06-29 19:06:20,961 - __main__ - INFO - Loading GitHub target from git_web_ml/musae_git_target.csv
+2025-06-29 19:06:20,991 - __main__ - ERROR - GitHub pipeline failed
+Traceback (most recent call last):
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 431, in main
+    master_df, G, model_results = run_dataset_pipeline(github_config)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 378, in run_dataset_pipeline
+    df1, df2 = config['loader'](*data_files)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 219, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 261, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 320, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 90, in load_github_data
+    target_df.columns = ['user_id', 'is_ml_dev']
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6332, in __setattr__
+    return object.__setattr__(self, name, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 814, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 238, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/base.py", line 98, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 3 elements, new values have 2 elements
+2025-06-29 19:07:07,017 - __main__ - INFO - Application starting.
+2025-06-29 19:07:07,525 - __main__ - INFO - Loading GitHub edges from git_web_ml/musae_git_edges.csv
+2025-06-29 19:07:07,567 - __main__ - INFO - Loading GitHub target from git_web_ml/musae_git_target.csv
+2025-06-29 19:07:07,587 - __main__ - ERROR - GitHub pipeline failed
+Traceback (most recent call last):
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 431, in main
+    master_df, G, model_results = run_dataset_pipeline(github_config)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 378, in run_dataset_pipeline
+    df1, df2 = config['loader'](*data_files)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 219, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 261, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 320, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 90, in load_github_data
+    target_df.columns = ['user_id', 'is_ml_dev']
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6332, in __setattr__
+    return object.__setattr__(self, name, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 814, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 238, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/base.py", line 98, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 3 elements, new values have 2 elements
+2025-06-29 19:07:25,844 - __main__ - INFO - Application starting.
+2025-06-29 19:07:27,296 - __main__ - INFO - Loading GitHub edges from git_web_ml/musae_git_edges.csv
+2025-06-29 19:07:27,331 - __main__ - INFO - Loading GitHub target from git_web_ml/musae_git_target.csv
+2025-06-29 19:07:27,351 - __main__ - ERROR - GitHub pipeline failed
+Traceback (most recent call last):
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 431, in main
+    master_df, G, model_results = run_dataset_pipeline(github_config)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 378, in run_dataset_pipeline
+    df1, df2 = config['loader'](*data_files)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 219, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 261, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 320, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 90, in load_github_data
+    target_df.columns = ['user_id', 'is_ml_dev']
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6332, in __setattr__
+    return object.__setattr__(self, name, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 814, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 238, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/base.py", line 98, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 3 elements, new values have 2 elements
+2025-06-29 19:07:33,827 - __main__ - INFO - Application starting.
+2025-06-29 19:07:34,029 - __main__ - INFO - Loading GitHub edges from git_web_ml/musae_git_edges.csv
+2025-06-29 19:07:34,076 - __main__ - INFO - Loading GitHub target from git_web_ml/musae_git_target.csv
+2025-06-29 19:07:34,095 - __main__ - ERROR - GitHub pipeline failed
+Traceback (most recent call last):
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 431, in main
+    master_df, G, model_results = run_dataset_pipeline(github_config)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 378, in run_dataset_pipeline
+    df1, df2 = config['loader'](*data_files)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 219, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 261, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 320, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 90, in load_github_data
+    target_df.columns = ['user_id', 'is_ml_dev']
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6332, in __setattr__
+    return object.__setattr__(self, name, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 814, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 238, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/base.py", line 98, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 3 elements, new values have 2 elements
+2025-06-29 19:07:46,828 - __main__ - INFO - Application starting.
+2025-06-29 19:07:47,076 - __main__ - INFO - Loading GitHub edges from git_web_ml/musae_git_edges.csv
+2025-06-29 19:07:47,120 - __main__ - INFO - Loading GitHub target from git_web_ml/musae_git_target.csv
+2025-06-29 19:07:47,140 - __main__ - ERROR - GitHub pipeline failed
+Traceback (most recent call last):
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 431, in main
+    master_df, G, model_results = run_dataset_pipeline(github_config)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 378, in run_dataset_pipeline
+    df1, df2 = config['loader'](*data_files)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 219, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 261, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 320, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 90, in load_github_data
+    target_df.columns = ['user_id', 'is_ml_dev']
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6332, in __setattr__
+    return object.__setattr__(self, name, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 814, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 238, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/base.py", line 98, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 3 elements, new values have 2 elements
+2025-06-29 19:07:55,374 - __main__ - INFO - Application starting.
+2025-06-29 19:07:55,629 - __main__ - INFO - Loading GitHub edges from git_web_ml/musae_git_edges.csv
+2025-06-29 19:07:55,668 - __main__ - INFO - Loading GitHub target from git_web_ml/musae_git_target.csv
+2025-06-29 19:07:55,687 - __main__ - ERROR - GitHub pipeline failed
+Traceback (most recent call last):
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 431, in main
+    master_df, G, model_results = run_dataset_pipeline(github_config)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 378, in run_dataset_pipeline
+    df1, df2 = config['loader'](*data_files)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 219, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 261, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 320, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 90, in load_github_data
+    target_df.columns = ['user_id', 'is_ml_dev']
+    ^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6332, in __setattr__
+    return object.__setattr__(self, name, value)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/properties.pyx", line 69, in pandas._libs.properties.AxisProperty.__set__
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 814, in _set_axis
+    self._mgr.set_axis(axis, labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 238, in set_axis
+    self._validate_set_axis(axis, new_labels)
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/internals/base.py", line 98, in _validate_set_axis
+    raise ValueError(
+ValueError: Length mismatch: Expected axis has 3 elements, new values have 2 elements
+2025-06-29 19:09:59,880 - __main__ - INFO - Application starting.
+2025-06-29 19:09:59,995 - __main__ - INFO - Loading Cora content from cora/cora.content
+2025-06-29 19:10:00,381 - __main__ - INFO - Loading Cora citations from cora/cora.cites
+2025-06-29 19:10:00,400 - __main__ - INFO - Building Cora graph and calculating metrics...
+2025-06-29 19:10:00,706 - __main__ - INFO - Cora network analysis complete.
+2025-06-29 19:10:00,811 - __main__ - INFO - Starting Cora model training...
+2025-06-29 19:10:00,923 - __main__ - INFO - Training Logistic Regression for Cora...
+2025-06-29 19:10:01,014 - __main__ - INFO - Training SGD Classifier for Cora...
+2025-06-29 19:10:01,039 - __main__ - INFO - Cora model training finished.
+2025-06-29 19:10:01,115 - __main__ - INFO - Loading GitHub edges from git_web_ml/musae_git_edges.csv
+2025-06-29 19:10:01,157 - __main__ - INFO - Loading GitHub target from git_web_ml/musae_git_target.csv
+2025-06-29 19:10:01,179 - __main__ - INFO - Building GitHub graph and calculating metrics...
+2025-06-29 19:10:01,180 - __main__ - ERROR - GitHub pipeline failed
+Traceback (most recent call last):
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'source'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 435, in main
+    master_df, G, model_results = run_dataset_pipeline(github_config)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 383, in run_dataset_pipeline
+    G, master_df = config['analyzer'](df1, df2)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 219, in __call__
+    return self._get_or_create_cached_value(args, kwargs, spinner_message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 261, in _get_or_create_cached_value
+    return self._handle_cache_miss(cache, value_key, func_args, func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/streamlit/runtime/caching/cache_utils.py", line 320, in _handle_cache_miss
+    computed_value = self._info.func(*func_args, **func_kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/main.py", line 106, in analyze_github_network
+    G = nx.from_pandas_edgelist(_edges_df, 'source', 'target')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<class 'networkx.utils.decorators.argmap'> compilation 4", line 3, in argmap_from_pandas_edgelist_1
+    import gzip
+            ^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/networkx/utils/backends.py", line 535, in _call_if_no_backends_installed
+    return self.orig_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/networkx/convert_matrix.py", line 436, in from_pandas_edgelist
+    g.add_edges_from(zip(df[source], df[target]))
+                         ~~^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/frame.py", line 4107, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/b33b3k/DATA MINING SOCIAL NETWORK ANALYSIS/venv/lib/python3.12/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'source'
+2025-06-29 19:12:36,032 - __main__ - INFO - Application starting.
+2025-06-29 19:12:36,144 - __main__ - INFO - Loading Cora content from cora/cora.content
+2025-06-29 19:12:36,486 - __main__ - INFO - Loading Cora citations from cora/cora.cites
+2025-06-29 19:12:36,510 - __main__ - INFO - Building Cora graph and calculating metrics...
+2025-06-29 19:12:36,838 - __main__ - INFO - Cora network analysis complete.
+2025-06-29 19:12:36,938 - __main__ - INFO - Starting Cora model training...
+2025-06-29 19:12:37,049 - __main__ - INFO - Training Logistic Regression for Cora...
+2025-06-29 19:12:37,170 - __main__ - INFO - Training SGD Classifier for Cora...
+2025-06-29 19:12:37,195 - __main__ - INFO - Cora model training finished.
+2025-06-29 19:12:37,276 - __main__ - INFO - Loading GitHub edges from git_web_ml/musae_git_edges.csv
+2025-06-29 19:12:37,315 - __main__ - INFO - Loading GitHub target from git_web_ml/musae_git_target.csv
+2025-06-29 19:12:37,337 - __main__ - INFO - Building GitHub graph and calculating metrics...
+2025-06-29 19:12:37,716 - __main__ - INFO - Calculating centrality metrics (Betweenness may take a moment)...
+2025-06-29 19:16:18,289 - __main__ - INFO - Detecting communities using Louvain method...
+2025-06-29 19:16:24,609 - __main__ - INFO - GitHub network analysis complete.
+2025-06-29 19:16:24,708 - __main__ - INFO - Starting GitHub model training...
+2025-06-29 19:16:24,724 - __main__ - INFO - Training Random Forest for GitHub...
+2025-06-29 19:16:29,250 - __main__ - INFO - Training Gradient Boosting for GitHub...
+2025-06-29 19:16:32,315 - __main__ - INFO - GitHub model training finished.
+2025-06-29 19:17:28,086 - __main__ - INFO - Application starting.
+2025-06-29 19:17:35,911 - __main__ - INFO - Application starting.
+2025-06-29 19:17:40,597 - __main__ - INFO - Application starting.
+2025-06-29 19:17:50,213 - __main__ - INFO - Application starting.
+2025-06-29 19:18:01,937 - __main__ - INFO - Application starting.
+2025-06-29 19:18:05,081 - __main__ - INFO - Application starting.
+2025-06-29 19:18:16,313 - __main__ - INFO - Application starting.
+2025-06-29 19:18:17,392 - __main__ - INFO - Application starting.
+2025-06-29 19:18:43,861 - __main__ - INFO - Application starting.
+2025-06-29 19:18:50,405 - __main__ - INFO - Application starting.
