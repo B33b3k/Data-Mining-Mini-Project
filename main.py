@@ -18,7 +18,112 @@ from typing import Dict, Any, Tuple
 # --- ======================================================= ---
 # ---              LOGGING & APP CONFIGURATION                ---
 # --- ======================================================= ---
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("app.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
 
+# --- PAGE CONFIGURATION ---
+st.set_page_config(
+    page_title="Network Analysis Dashboard",
+    page_icon="🕸️",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# --- ======================================================= ---
+# ---               CORE DATASET FUNCTIONS                    ---
+# --- ======================================================= ---
+
+@st.cache_data
+def load_cora_data(content_file: Path, cites_file: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Loads and preprocesses the Cora dataset from local files."""
+    logger.info(f"Loading Cora content from {content_file}")
+    content_df = pd.read_csv(
+        content_file, sep='\t', header=None,
+        names=['paper_id'] + [f'word_{i}' for i in range(1433)] + ['subject']
+    )
+    word_cols = [f'word_{i}' for i in range(1433)]
+    content_df['text'] = content_df[word_cols].apply(lambda row: ' '.join(row.index[row == 1]), axis=1)
+    
+    logger.info(f"Loading Cora citations from {cites_file}")
+    cites_df = pd.read_csv(cites_file, sep='\t', header=None, names=['cited_paper_id', 'citing_paper_id'])
+    return content_df, cites_df
+
+@st.cache_data
+def analyze_cora_network(_content_df: pd.DataFrame, _cites_df: pd.DataFrame) -> tuple[nx.DiGraph, pd.DataFrame]:
+    """Builds graph and calculates all metrics for the Cora dataset."""
+    logger.info("Building Cora graph and calculating metrics...")
+    G = nx.from_pandas_edgelist(_cites_df, 'citing_paper_id', 'cited_paper_id', create_using=nx.DiGraph())
+    
+    centrality = pd.DataFrame({
+        'Degree': dict(G.degree()), 'In-Degree': dict(G.in_degree()), 'PageRank': nx.pagerank(G, alpha=0.85)
+    }).rename_axis('paper_id')
+    
+    partition = community_louvain.best_partition(G.to_undirected(), random_state=42)
+    communities = pd.Series(partition, name="Community").rename_axis('paper_id')
+    
+    master_df = _content_df.set_index('paper_id').join(centrality).join(communities)
+    master_df['Community'] = master_df['Community'].fillna(-1).astype(int)
+    logger.info("Cora network analysis complete.")
+    return G, master_df.reset_index()
+
+# --- MODIFIED GITHUB DATA LOADING FUNCTION ---
+@st.cache_data
+def load_github_data(edges_file: Path, target_file: Path) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Loads and preprocesses the MUSAE GitHub dataset from local files."""
+    logger.info(f"Loading GitHub edges from {edges_file}")
+    # --- FIX #2: Handle edge file with columns 'id_1', 'id_2' ---
+    # 1. Load the edges CSV
+    edges_df = pd.read_csv(edges_file)
+    # 2. Immediately rename the columns to what the app expects ('source', 'target')
+    edges_df.columns = ['source', 'target']
+    
+    logger.info(f"Loading GitHub target from {target_file}")
+    # 1. Load the full target CSV
+    full_target_df = pd.read_csv(target_file)
+    # 2. Select only the 'id' and 'ml_target' columns
+    try:
+        target_df = full_target_df[['id', 'ml_target']]
+    except KeyError:
+        st.error("The `musae_git_target.csv` file must contain columns named 'id' and 'ml_target'. Please check the file's header.")
+        st.stop()
+        
+    # 3. Rename the selected columns to what the app expects
+    target_df.columns = ['user_id', 'is_ml_dev']
+    target_df['user_id'] = target_df['user_id'].astype(int)
+    return edges_df, target_df
+
+@st.cache_data
+def analyze_github_network(_edges_df: pd.DataFrame, _target_df: pd.DataFrame) -> tuple[nx.Graph, pd.DataFrame]:
+    """Builds graph and calculates all metrics for the GitHub dataset."""
+    logger.info("Building GitHub graph and calculating metrics...")
+    # This now works because load_github_data provides the 'source' and 'target' columns
+    G = nx.from_pandas_edgelist(_edges_df, 'source', 'target')
+    
+    logger.info("Calculating centrality metrics (Betweenness may take a moment)...")
+    k_sample = min(1000, len(G.nodes()) - 1)
+    metrics_df = pd.DataFrame({
+        'Degree': dict(G.degree()), 'Betweenness': nx.betweenness_centrality(G, k=k_sample, seed=42), 'PageRank': nx.pagerank(G)
+    }).rename_axis('user_id')
+    
+    logger.info("Detecting communities using Louvain method...")
+    partition = community_louvain.best_partition(G, random_state=42)
+    metrics_df['Community'] = pd.Series(partition)
+    
+    master_df = _target_df.set_index('user_id').join(metrics_df)
+    master_df['dev_type'] = master_df['is_ml_dev'].apply(lambda x: 'Machine Learning' if x == 1 else 'Web')
+    
+    master_df = master_df.dropna(subset=['Degree', 'Community'])
+    master_df['Community'] = master_df['Community'].astype(int)
+    logger.info("GitHub network analysis complete.")
+    return G, master_df.reset_index()
 
 # --- ======================================================= ---
 # ---                MODEL TRAINING FUNCTIONS                ---
