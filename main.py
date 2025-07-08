@@ -399,7 +399,6 @@ def main():
         ["Overview", "Centrality and Connectivity", "Community Deep-Dive", "K-Core Decomposition", "Model Comparison"]
     )
     st.sidebar.markdown("---")
-    st.sidebar.info("The app is now tab-based. Select a view above and compare the datasets side-by-side.")
 
     tab1, tab2 = st.tabs([APP_CONFIG['Cora']['title'], APP_CONFIG['GitHub']['title']])
 
